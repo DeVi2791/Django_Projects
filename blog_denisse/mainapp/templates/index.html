@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+		<meta name="author" content="Denisse Villamar">
+		<title>Manejo de Formulario</title>
+	</head>
+	<body>
+		<h1>Manejo de Formulario</h1>
+		<!--form sirve para crear un formulario en la página web/-->
+		<!-- el atributo name permite nombrar el formulario para referenciar en el caso de varios formularios/-->
+		<!-- autocomplete permite autocompletar campos de un formulario/-->
+		<form name="formContacto" autocomplete="on">
+			<!-- Permite crear un marco con etiqueta/-->
+			<fieldset>
+				<!-- legend permite colocar el titulo de la etiqueta en el marco/-->
+				<legend>Datos Personales</legend>
+				<p>En el siguiente formulario debes diligenciar tus datos básicos.</p>
+				<p>Todos los campos deben estar completos y la información debe ser real.</p>
+				<!--label Crea etiquetas en un formulario/-->
+				<p>
+					<!-- los atributos for y id de label e input, respectivamente, permiten asociar la etiqueta con la entrada,
+					por tanto deben llevar el mismo valor/-->
+					<label for="Nombre">Nombre: </label>
+					<!--Crea campos de entradas/-->
+					<!-- El atributo type indica el tipo de dato de la caja de texto/-->
+					<!-- El atributo id crea un identificador para la caja de texto/-->
+					<!-- El atributo name, permite nombrar la entrada/-->
+					<!-- El atributo disable, deshabilita el ingreso de datos/-->
+					<!-- El atributo readonly, solo lectura/-->
+					<!-- El atributo maxlength, número máximo de caracteres/-->
+					<!-- El atributo placeholder, permite crear una pista de lo que deben ingresar/-->
+					<!-- El atributo required, permite no enviar el formulario sin el campo lleno/-->
+					<input type="text" id="Nombre" required>
+					</br>
+				</p>
+				<p>
+					<label for="Apellido">Apellido: </label>
+					<input type="text" id="Apellido">
+					</br>
+				</p>
+				<p>
+					<label for="fechaNacimiento">Fecha de Nacimiento: </label>
+					<!-- el contenido datetime dentro de type implica un tipo de datos fecha hora/-->
+					<!-- el contenido datetime-local dentro de type implica un tipo de datos fecha hora local/-->
+					<!-- el contenido month dentro de type implica un tipo de datos mes/-->
+					<input type="date" id="fechaNacimiento">
+					</br>
+					<input type="time" id="tiempo">
+					</br>
+				</p>
+				<p>
+					<label for="edad">Edad: </label>
+					<!-- El atributo max, valor máximo a ingresar en el cuadro de entrada/-->
+					<!-- El atributo min/-->
+					<!-- El atributo step, incremento en el dato ingresado/-->
+					<input type="number" id="edad">
+					</br>
+				</p>
+				<p>
+					<label for="Genero">Género: </label>
+					<b>Masculino</b><input type="radio" name="GeneroMasc" id="Genero">
+					<b>Femenino</b><input type="radio" name="GeneroFem" id="Genero">
+					</br>
+				</p>
+				<p>
+					<label for="email">Email: </label>
+					<!-- El atributo required, permite no enviar el formulario sin el campo lleno o con formato email/-->
+					<input type="email" id="email" required>
+					</br>
+				</p>
+				<p>
+					<label for="fono">Teléfono: </label>
+					<input type="tel" id="fono">
+					</br>
+				</p>
+				<p>
+					<label for="url">URL: </label>
+					<input type="url" id="url">
+					</br>
+				</p>
+				<p>
+					<label for="ocupacion">Ocupación: </label>
+					<!--select permite crear una lista de selección/-->
+					<select>
+						<option>Selecciona una opcion.. </option>
+						<option>Estudiante</option>
+						<option>Trabajador</option>
+						<option>Otro</option>
+					</select>
+					</br>
+				</p>
+				<p>
+					<label for="colorfav">Color Favorito: </label>
+					<input type="color" id="colfav">
+					</br>
+				</p>
+				<p>
+					<label for="rangLid">Rango de Liderazgo: </label>
+					<input type="range" id="rangLid" name="ranglid" min="0" max="10">
+					</br>
+				</p>
+				<p>
+					<label for="coment">Comentarios: </label>
+					<!--Permite crear una caja de texto con de varias líneas o área de texto/-->
+					<textarea name="areatext" rows="8" cols="40"></textarea>
+					</br>
+				</p>
+				<p>
+					<label for="adjFile">Archivos Planos, archivos de Word,Excel y otros: </label>
+					<!--Permite adjuntar un archivo y abre la ventana de búsqueda/-->
+					<input type="file"></input>
+					</br>
+				</p>
+				<p>
+					<label for="busq">Búsqueda: </label>
+					<!--Tipo de dato para búsqueda/-->
+					<input type="search" rows="8" cols="40"></input>
+					</br>
+				</p>
+				<p>
+					<label for="semana">Semana: </label>
+					<!--Tipo de dato para semana/-->
+					<input type="week"></input>
+					</br>
+				</p>
+				<!--botón de guardar/-->
+				<!-- el atributo submit permite guardar los datos ingresados en el formulario/-->
+				<!-- el atributo value permite indicar el contenido o etiqueta del botón/-->
+				<input type="submit" value="Enviar">
+				<input type="button" value=":D">
+				<input type="reset" value="Limpiar Formulario">
+			</fieldset>
+		</form>
+	</body>
+</html>
