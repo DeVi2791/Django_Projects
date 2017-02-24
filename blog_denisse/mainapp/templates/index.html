@@ -1,13 +1,41 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,user-scalable=no">
 		<meta name="author" content="Denisse Villamar">
+		<!--link rel="stylesheet" href="{% static 'style.css' %}"/-->
+		<link rel="stylesheet" href="{% static 'bootstrap.css' %}">
 		<title>Manejo de Formulario</title>
 	</head>
 	<body>
-		<h1>Manejo de Formulario</h1>
+		<h1><img src="{% static 'images/inocar.png'%}" alt="Imagen Inocar" title="Imagen Inocar" height="150px"/>Manejo de Formulario</h1>
+		 {% if entry_total > 0 %}
+                        <h2>Tengo {{entry_total}}  entradas disponibles</h2>
+                 {% endif %}
+
+		<main class="container" role='main'>
+		<div class="panel panel-default">
+			<!--
+			<h3>{{entry_title}}</h3>
+			<p>{{entry_body}}</p>
+			/-->
+			{% for entry in entrys %}
+				<div>
+					<div class="panel-heading">
+						<h3 class="panel-title">{{ entry.title}} </h3>
+					</div>
+					<div class="panel-body">
+						<div syle="float:left; padding-left:lem; position:static">
+							<img style="height:6em" class="img-response" src="{{ entry.img_url }}">
+						</div>
+						<div style="float:left; padding-left:lem; position:static">{{entry.body}}</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		</main>
 		<!--form sirve para crear un formulario en la página web/-->
 		<!-- el atributo name permite nombrar el formulario para referenciar en el caso de varios formularios/-->
 		<!-- autocomplete permite autocompletar campos de un formulario/-->

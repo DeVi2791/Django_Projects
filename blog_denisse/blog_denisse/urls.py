@@ -1,7 +1,7 @@
 from django.conf.urls import include, url
 from django.contrib import admin
 #para utilizar vistas importando carpeta
-from mainapp import views
+#from mainapp import views
 
 urlpatterns = [
     # Examples:
